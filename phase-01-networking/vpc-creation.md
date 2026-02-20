@@ -25,14 +25,33 @@ You cannot properly design multi-AZ architectures
 Network-level reliability becomes limited
 
 
-Steps followed in AWS Console:
 
-Opened VPC Dashboard
+🔹 Steps
 
-Chose Create VPC
+Go to AWS Console
 
-Selected VPC only
+Search → VPC
 
-Assigned CIDR block: 10.0.0.0/16
+Click Your VPCs
 
-Created the VPC named medicare-vpc
+Click Create VPC
+
+🔹 Select
+
+Resources to create → VPC only
+
+Name tag → medicare-vpc
+
+IPv4 CIDR block → 10.0.0.0/16
+
+IPv6 CIDR → ❌ None
+
+Tenancy → Default
+
+📌 Click Create VPC
+
+✅ Why this matters (Reliability)
+
+Isolated network
+
+Full control over subnets and AZ placement
