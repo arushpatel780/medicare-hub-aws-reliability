@@ -133,106 +133,87 @@ Amazon Route 53 – DNS routing and health checks
 
 📂 Project Documentation Structure
 
-📑 Repository Navigation (Documentation Flow)
+## 📑 Project Documentation Structure
 
-This project is documented step by step, following the exact order in which the architecture was designed and built.
+This repository is documented in a **step-by-step, phase-wise manner**, following the exact order in which the AWS Reliability architecture was designed and implemented.
 
-1️⃣ Architecture Overview
+---
 
-📁 Architecture
+### 🏗️ Architecture Overview
+- 📁 **architecture**
+  - 📄 [Architecture Explanation](architecture/architecture-explanation.md)
+  - 🖼️ [Architecture Diagram](architecture/architecture-diagram.png)
 
-📄 Architecture Explanation
+---
 
-🖼️ Architecture Diagram (architecture/architecture-diagram.png)
+### 1️⃣ Phase 01 – Networking Foundation
+- 📁 **phase-01-networking**
+  - 📄 [Overview](phase-01-networking/overview.md)
+  - 📄 [VPC Creation](phase-01-networking/vpc-creation.md)
+  - 📄 [Subnet Setup (Multi-AZ)](phase-01-networking/subnet-setup.md)
+  - 📄 [Route Tables & Internet Gateway](phase-01-networking/route-tables-igw.md)
+  - 📸 [Screenshots](phase-01-networking/screenshots/)
 
-2️⃣ Phase 01 – Networking Foundation
+---
 
-📁 phase-01-networking
+### 2️⃣ Phase 02 – Compute Layer (EC2 & Auto Scaling)
+- 📁 **phase-02-compute**
+  - 📄 [Overview](phase-02-compute/overview.md)
+  - 📄 [EC2 Launch Template](phase-02-compute/launch-template.md)
+  - 📄 [Auto Scaling Group](phase-02-compute/auto-scaling-group.md)
+  - 📸 [Screenshots](phase-02-compute/screenshots/)
 
-📄 Overview
+---
 
-📄 VPC Creation
+### 3️⃣ Phase 03 – Load Balancing
+- 📁 **phase-03-load-balancing**
+  - 📄 [Overview](phase-03-load-balancing/overview.md)
+  - 📄 [Target Group Configuration](phase-03-load-balancing/target-group.md)
+  - 📄 [Application Load Balancer](phase-03-load-balancing/application-load-balancer.md)
+  - 📸 [Screenshots](phase-03-load-balancing/screenshots/)
 
-📄 Subnet Setup (Multi-AZ)
+---
 
-📄 Route Tables & Internet Gateway
+### 4️⃣ Phase 04 – Database Layer (RDS Multi-AZ)
+- 📁 **phase-04-database**
+  - 📄 [Overview](phase-04-database/overview.md)
+  - 📄 [RDS Multi-AZ Setup](phase-04-database/rds-multi-az.md)
+  - 📸 [Screenshots](phase-04-database/screenshots/)
 
-📸 Screenshots (phase-01-networking/screenshots/)
+---
 
-3️⃣ Phase 02 – Compute Layer (EC2 & Auto Scaling)
+### 5️⃣ Phase 05 – Shared Storage (Amazon EFS)
+- 📁 **phase-05-shared-storage**
+  - 📄 [Overview](phase-05-shared-storage/overview.md)
+  - 📄 [Amazon EFS Setup](phase-05-shared-storage/amazon-efs.md)
+  - 📸 [Screenshots](phase-05-shared-storage/screenshots/)
 
-📁 phase-02-compute
+---
 
-📄 Overview
+### 6️⃣ Phase 06 – DNS & Routing (Route 53)
+- 📁 **phase-06-dns-routing**
+  - 📄 [Overview](phase-06-dns-routing/overview.md)
+  - 📄 [Route 53 Setup](phase-06-dns-routing/route53-setup.md)
+  - 📸 [Screenshots](phase-06-dns-routing/screenshots/)
 
-📄 EC2 Launch Template
+---
 
-📄 Auto Scaling Group
+### 7️⃣ Failure Testing (Reliability Proof)
+- 📁 **failure-testing**
+  - 📄 [Overview](failure-testing/overview.md)
+  - 📄 [EC2 Failure & Auto Scaling Test](failure-testing/ec2-failure-test.md)
+  - 📄 [ALB Health Check Test](failure-testing/alb-health-check-test.md)
+  - 📸 [Screenshots](failure-testing/screenshots/)
 
-📸 Screenshots (phase-02-compute/screenshots/)
+---
 
-4️⃣ Phase 03 – Load Balancing
+### 8️⃣ Cleanup & Cost Control
+- 📁 **cleanup-and-cost-control**
+  - 📄 [Resources Created](cleanup-and-cost-control/resources-created.md)
+  - 📄 [Resources Deleted](cleanup-and-cost-control/resources-deleted.md)
 
-📁 phase-03-load-balancing
+---
 
-📄 Overview
-
-📄 Target Group Configuration
-
-📄 Application Load Balancer
-
-📸 Screenshots (phase-03-load-balancing/screenshots/)
-
-5️⃣ Phase 04 – Database Layer (RDS Multi-AZ)
-
-📁 phase-04-database
-
-📄 Overview
-
-📄 RDS Multi-AZ Setup
-
-📸 Screenshots (phase-04-database/screenshots/)
-
-6️⃣ Phase 05 – Shared Storage (Amazon EFS)
-
-📁 phase-05-shared-storage
-
-📄 Overview
-
-📄 Amazon EFS Setup
-
-📸 Screenshots (phase-05-shared-storage/screenshots/)
-
-7️⃣ Phase 06 – DNS & Routing (Route 53)
-
-📁 phase-06-dns-routing
-
-📄 Overview
-
-📄 Route 53 Setup
-phase-06-dns-routing/route53-setup.md
-
-📸 Screenshots (phase-06-dns-routing/screenshots/)
-
-8️⃣ Failure Testing (Reliability Proof)
-
-📁 failure-testing
-
-📄 Overview
-
-📄 EC2 Failure & Auto Scaling Test
-
-📄 ALB Health Check Test
-
-📸 Screenshots (failure-testing/screenshots/)
-
-9️⃣ Cleanup & Cost Control
-
-📁 cleanup-and-cost-control
-
-📄 Resources Created
-
-📄 Resources Deleted (Cost Control)
 ⚠️ Cost Awareness Note
 
 Some AWS services used in this project (such as ALB, NAT Gateway, RDS Multi-AZ, and EFS) were created temporarily for learning and documentation and deleted immediately to remain cost-efficient.
