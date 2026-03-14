@@ -1,14 +1,15 @@
-MediCare Hub – AWS Reliability Architecture
+## MediCare Hub – AWS Reliability Architecture
 
 A hands-on AWS project focused on designing a highly available, fault-tolerant, and self-healing architecture for a medical application using Amazon Web Services (AWS) Reliability Pillar best practices.
 This project demonstrates how to eliminate single points of failure, handle infrastructure failures automatically, and build production-grade reliability.
 
-Project Summary
+## Project Summary
 
 MediCare Hub is a conceptual medical web application that originally lacked fault tolerance.
 Any failure in servers, database, or network could lead to application downtime and data unavailability.
 
 In this project, I redesigned the system using AWS Reliability Pillar principles by implementing:
+
 1.Multi-AZ architecture
 
 2.Auto Scaling and self-healing compute
@@ -23,71 +24,50 @@ In this project, I redesigned the system using AWS Reliability Pillar principles
 
 The final result is a highly available and resilient system capable of recovering automatically from failures.
 
-Problem Statement
+## Problem Statement
 
 The original MediCare Hub architecture had single points of failure, such as:
-
 A single EC2 instance
-
 A single database instance
-
 No load balancer
-
 No automatic recovery mechanism
 
 This meant:
 
 If the server failed → application went down
-
 If the database failed → data became unavailable
-
 Manual intervention was required to recover
-
 For a medical application, this level of risk is unacceptable.
 
-What I Built
+## What I Built
 
 To solve these problems, I built a reliability-focused AWS architecture that includes:
 
 A custom VPC with public and private subnets across multiple Availability Zones
-
 EC2 instances managed by an Auto Scaling Group
-
 An Application Load Balancer to distribute traffic and monitor health
-
 A Multi-AZ RDS database for automatic failover
-
 Amazon EFS for shared and durable storage
-
 Route 53 for DNS-level routing and availability
-
 Each layer of the system is designed to fail gracefully and recover automatically.
 
-Why Reliability Matters
+## Why Reliability Matters
 
 Reliability is critical because:
-
 Infrastructure failures are inevitable
-
 Systems must recover without manual intervention
-
 Downtime can impact users, trust, and business operations
-
 Medical systems must ensure continuous availability
 
 This project follows key reliability principles:
 
 No single point of failure
-
 Automatic failover
-
 Health monitoring
-
 Multi-AZ deployment
-
 Self-healing infrastructure
 
-🖼️ Architecture Diagram
+🖼️## Architecture Diagram
 
 The diagram below represents the final reliable architecture of the MediCare Hub application:
 
@@ -95,38 +75,17 @@ The diagram below represents the final reliable architecture of the MediCare Hub
 
 architecture/architecture-diagram.png
 
-The diagram shows:
-
-Multi-AZ VPC design
-
-Application Load Balancer
-
-Auto Scaling EC2 instances
-
-Multi-AZ RDS database
-
-Amazon EFS
-
-Route 53 routing
-
-☁️ AWS Services Used
+## ☁️ AWS Services Used
 
 The following AWS services were used to implement this project:
 
 Amazon VPC – Network isolation and control
-
 Amazon EC2 – Application servers
-
 EC2 Launch Template – Standardized instance configuration
-
 Auto Scaling Group – Self-healing and scaling
-
 Application Load Balancer (ALB) – Traffic distribution and health checks
-
 Amazon RDS (Multi-AZ) – Reliable relational database
-
 Amazon EFS – Shared and durable file storage
-
 Amazon Route 53 – DNS routing and health checks
 
 📂 Project Documentation Structure
