@@ -35,8 +35,11 @@ No automatic recovery mechanism
 This meant:
 
 If the server failed → application went down
+
 If the database failed → data became unavailable
+
 Manual intervention was required to recover
+
 For a medical application, this level of risk is unacceptable.
 
 ## What I Built
@@ -44,20 +47,32 @@ For a medical application, this level of risk is unacceptable.
 To solve these problems, I built a reliability-focused AWS architecture that includes:
 
 A custom VPC with public and private subnets across multiple Availability Zones
+
 EC2 instances managed by an Auto Scaling Group
+
 An Application Load Balancer to distribute traffic and monitor health
+
 A Multi-AZ RDS database for automatic failover
+
 Amazon EFS for shared and durable storage
+
 Route 53 for DNS-level routing and availability
+
 Each layer of the system is designed to fail gracefully and recover automatically.
+
 
 ## Why Reliability Matters
 
 Reliability is critical because:
+
 Infrastructure failures are inevitable
+
 Systems must recover without manual intervention
+
 Downtime can impact users, trust, and business operations
+
 Medical systems must ensure continuous availability
+
 
 This project follows key reliability principles:
 
@@ -71,7 +86,7 @@ This project follows key reliability principles:
 
 -Self-healing infrastructure
 
-🖼️## Architecture Diagram
+## Architecture Diagram
 
 The diagram below represents the final reliable architecture of the MediCare Hub application:
 
@@ -83,13 +98,13 @@ architecture/architecture-diagram.png
 
 The following AWS services were used to implement this project:
 
-Amazon VPC – Network isolation and control
-Amazon EC2 – Application servers
-EC2 Launch Template – Standardized instance configuration
-Auto Scaling Group – Self-healing and scaling
-Application Load Balancer (ALB) – Traffic distribution and health checks
-Amazon RDS (Multi-AZ) – Reliable relational database
-Amazon EFS – Shared and durable file storage
+Amazon VPC – Network isolation and control,
+Amazon EC2 – Application servers,
+EC2 Launch Template – Standardized instance configuration,
+Auto Scaling Group – Self-healing and scaling,
+Application Load Balancer (ALB) – Traffic distribution and health checks,
+Amazon RDS (Multi-AZ) – Reliable relational database,
+Amazon EFS – Shared and durable file storage,
 Amazon Route 53 – DNS routing and health checks
 
 📂 Project Documentation Structure
