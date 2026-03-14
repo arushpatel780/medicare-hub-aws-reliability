@@ -1,7 +1,6 @@
 MediCare Hub – AWS Reliability Architecture
 
 A hands-on AWS project focused on designing a highly available, fault-tolerant, and self-healing architecture for a medical application using Amazon Web Services (AWS) Reliability Pillar best practices.
-
 This project demonstrates how to eliminate single points of failure, handle infrastructure failures automatically, and build production-grade reliability.
 
 Project Summary
@@ -10,19 +9,12 @@ MediCare Hub is a conceptual medical web application that originally lacked faul
 Any failure in servers, database, or network could lead to application downtime and data unavailability.
 
 In this project, I redesigned the system using AWS Reliability Pillar principles by implementing:
-
-Multi-AZ architecture
-
-Auto Scaling and self-healing compute
-
-Load balancing with health checks
-
-Multi-AZ database
-
-Shared storage
-
-DNS-level routing
-
+1.Multi-AZ architecture
+2.Auto Scaling and self-healing compute
+3.Load balancing with health checks
+4.Multi-AZ database
+5.Shared storage
+6.DNS-level routing
 The final result is a highly available and resilient system capable of recovering automatically from failures.
 
 Problem Statement
