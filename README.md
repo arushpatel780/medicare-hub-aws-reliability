@@ -10,11 +10,17 @@ Any failure in servers, database, or network could lead to application downtime 
 
 In this project, I redesigned the system using AWS Reliability Pillar principles by implementing:
 1.Multi-AZ architecture
+
 2.Auto Scaling and self-healing compute
+
 3.Load balancing with health checks
+
 4.Multi-AZ database
+
 5.Shared storage
+
 6.DNS-level routing
+
 The final result is a highly available and resilient system capable of recovering automatically from failures.
 
 Problem Statement
