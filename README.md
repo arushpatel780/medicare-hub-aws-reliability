@@ -62,9 +62,13 @@ Medical systems must ensure continuous availability
 This project follows key reliability principles:
 
 -No single point of failure
+
 -Automatic failover
+
 -Health monitoring
+
 -Multi-AZ deployment
+
 -Self-healing infrastructure
 
 🖼️## Architecture Diagram
